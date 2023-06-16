@@ -14,11 +14,11 @@ type Props = {
   defaultComponent?: ReactNode;
 };
 
-export function Router({
+export const Router = ({
   children,
   paths,
   defaultComponent,
-}: React.PropsWithChildren<Props>) {
+}: React.PropsWithChildren<Props>) => {
   const [currentPath, setCurrentPath] = useState(getCurrentPath());
 
   useEffect(() => {

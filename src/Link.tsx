@@ -9,7 +9,7 @@ interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
 }
 
-export default function Link({ href, children, ...props }: Props) {
+export function Link({ href, children, ...props }: Props) {
   const onClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const isMainEvent = event.button === 0;
     const isModifiedEvent =

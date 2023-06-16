@@ -1,5 +1,5 @@
-import Link from '../Link';
-import { RoutedPageProps } from '../Router';
+import { Link } from '../Link';
+import type { RoutedPageProps } from '../Router';
 
 const i18n = {
   en: {

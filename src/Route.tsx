@@ -5,6 +5,6 @@ export type RouteProps = {
   component: React.FunctionComponent<RoutedPageProps>;
 };
 
-export default function Route(_props: RouteProps) {
+export const Route = (_props: RouteProps) => {
   return null;
 }
