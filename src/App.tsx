@@ -7,7 +7,7 @@ import {
 } from 'react';
 import './App.css';
 import { Router } from './Router';
-import Route from './Route';
+import { Route } from './Route';
 
 function lazyLoadWithPrefetch<T extends ComponentType<any>>(
   factory: () => Promise<{ default: T }>

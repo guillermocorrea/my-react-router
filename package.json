@@ -13,7 +13,7 @@
   "sideEffects": false,
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && npm run prepare",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "pre:prepare": "npm run clean",
     "prepare": "swc src -d lib && npm run clean:lib && cp package.json lib && cp README.md lib",
