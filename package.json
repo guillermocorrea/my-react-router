@@ -1,6 +1,6 @@
 {
   "name": "my-react-router",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -12,6 +12,7 @@
   },
   "sideEffects": false,
   "types": "lib/index.d.ts",
+  "keywords": ["react", "router", "react-router", "my-react-router"],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && npm run prepare",
