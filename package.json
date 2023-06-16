@@ -1,6 +1,6 @@
 {
   "name": "my-react-router",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -11,12 +11,13 @@
     "./package.json": "./package.json"
   },
   "sideEffects": false,
+  "types": "lib/types/src/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && npm run prepare",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "pre:prepare": "npm run clean",
-    "prepare": "swc src -d lib && npm run clean:lib && cp package.json lib && cp README.md lib",
+    "prepare": "swc src -d lib && npm run clean:lib && cp package.json lib && cp README.md lib && tsc --project tsconfig.types.json",
     "clean": "rm -rf lib",
     "clean:lib": "rm lib/App.js && rm lib/Router.test.js && rm lib/main.js && rm lib/vite-env.d.js && rm -rf lib/pages",
     "preview": "vite preview",

@@ -42,7 +42,7 @@ export const Router = ({
   const pathsFromChildren = React.Children.map(children, (child) => {
     if (!React.isValidElement<RoutedPageProps>(child)) return null;
     return child.props;
-  })?.filter(Boolean) as Props['paths'] | undefined;
+  })?.filter(Boolean) as unknown as Props['paths'] | undefined;
 
   const allPaths =
     (pathsFromChildren ? [...(paths ?? []), ...pathsFromChildren] : paths) ??
